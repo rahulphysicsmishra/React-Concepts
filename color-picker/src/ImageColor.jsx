@@ -32,7 +32,19 @@ function GetColor() {
         const colorNameResult = namer(rgbColor);
         console.log(colorNameResult)
         setColorName(colorNameResult.basic[0].name);
+
+        const Box = document.getElementById("color-shift")
+        Box.style.backgroundColor = color
+
     };
+
+    const handleReset = () => {
+        setColor("")
+        setClickPosition({x: 0, y: 0})
+        document.getElementById("color-shift").style.backgroundColor = "#FFFFFF"
+    }
+
+
 
     return (<div>
         <h1>Let's Find Color From Your Image</h1>
@@ -47,7 +59,18 @@ function GetColor() {
          <p>Color: <span style={{color}}>{ color || "Click to pick a color"}</span></p>
          <p>Color Name: {" "}<span style={{color}}>{ colorName }</span></p>
          <div>
-            <button onClick={()=>{setColor(""); setClickPosition({x: 0, y: 0})}}>Reset</button>
+            <button onClick={handleReset}>Reset</button>
+         </div>
+         <div
+         id="color-shift"
+         style={{
+            width: "200px",
+            height: "200px",
+            margin: "20px auto",
+            border: "2px solid black",
+            backgroundColor: "white",
+          }}
+         >
          </div>
     </div>)
 }
