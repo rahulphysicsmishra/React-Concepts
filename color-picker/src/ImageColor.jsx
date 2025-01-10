@@ -34,7 +34,7 @@ function GetColor() {
         setColorName(colorNameResult.basic[0].name);
 
         const Box = document.getElementById("color-shift")
-        Box.style.backgroundColor = color
+        Box.style.backgroundColor = colorNameResult.basic[0].name
 
     };
 
