@@ -1,0 +1,73 @@
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;  /* or 'contain', depending on how you want it to scale */
+    border-radius: 8px;  /* optional, if you want rounded corners */
+    margin: 10px;  /* optional, to add spacing */
+  }
+  
+  .book-list {
+    display: flex;               /* Arrange items in a row */
+    flex-direction: row;         /* Ensure horizontal alignment */
+    gap: 20px;                   /* Add spacing between items */
+    overflow-x: auto;            /* Enable horizontal scrolling if needed */
+    padding: 10px;               /* Add padding inside the container */
+  }
+  
+  .book-list::-webkit-scrollbar {
+    height: 8px;                 /* Style scrollbar for horizontal scrolling */
+  }
+  
+  .book-list::-webkit-scrollbar-thumb {
+    background: #888;            /* Scrollbar thumb color */
+    border-radius: 4px;          /* Rounded corners for scrollbar */
+  }
+  
+  .book-list::-webkit-scrollbar-thumb:hover {
+    background: #555;            /* Darker thumb on hover */
+  }
+  
+
+  .book-card {
+    border: 1px solid #ddd;                    /* Light border */
+    border-radius: 10px;                       /* Rounded corners */
+    padding: 15px;                             /* Inner spacing */
+    width: 250px;                              /* Fixed width for the card */
+    text-align: center;                        /* Center the text */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow for elevation */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+    background-color: #fff;                    /* White background */
+  }
+  
+  .book-card:hover {
+    transform: translateY(-5px);               /* Slight lift on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+  }
+  
+  .responsive-img {
+    width: 100%;                               /* Image scales to fit container */
+    height: auto;                              /* Maintains aspect ratio */
+    border-radius: 8px;                        /* Rounded corners for the image */
+    margin-top: 10px;                          /* Space between title and image */
+    margin-bottom: 10px;                       /* Space between image and text */
+  }
+  
+  .book-card h2 {
+    font-size: 1.8em;               /* Larger font size for emphasis */
+    font-weight: bold;              /* Make the title stand out */
+    color: #2c3e50;                 /* Dark, modern shade for the title */
+    margin-bottom: 15px;            /* Add spacing below the title */
+    text-transform: capitalize;     /* Ensure title case */
+    letter-spacing: 0.5px;          /* Add subtle letter spacing */
+    line-height: 1.2;               /* Ensure the title is compact */
+  }
+  
+  .book-card p {
+    font-size: 1em;                 /* Standard readable font size */
+    color: #6c757d;                 /* Soft, muted gray for the description */
+    margin-top: 10px;               /* Add spacing above the description */
+    line-height: 1.6;               /* Improve readability */
+    text-align: justify;            /* Neatly align the description */
+    font-style: italic;             /* Add a subtle, stylish look */
+  }
+  
